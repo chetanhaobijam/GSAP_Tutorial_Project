@@ -6,13 +6,17 @@
   box-sizing: border-box;
 }
 
+:root {
+  --primary-purple: #b200f2;
+}
+
 body, html {
   font-size: 15px;
   font-family: 'Raleway', Arial, sans-serif;
-  overflow: auto;
   display: grid;
   grid-template-columns: 7fr 1fr;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 #main {
@@ -40,21 +44,23 @@ body, html {
 }
 
 .content a {
-  background-color: #b200f2;
-  border: 1px solid #b200f2;
+  background-color: var(--primary-purple);
+  border: 2px solid var(--primary-purple);
   padding: 1rem;
   color: #fff;
   text-transform: uppercase;
   text-decoration: none;
+  border-radius: 5px;
 }
 
 .content a:hover {
   background-color: #fff;
-  color: #b200f2;
+  color: var(--primary-purple);
 }
 
 .wrapper {
   z-index: 2;
+  position: relative;
 }
 
 .wrapper img {
