@@ -24,5 +24,12 @@ __How to apply timeline animations__
 ````javascript
 const tl = gsap.timeline({defaults: {duration: 1}});
 tl.from(".anim1", {opacity: 0, ease: Power1.inOut, x: -250, stagger: 0.6})
-.to(rule, {cssRule: {scaleY: 0}, "-=2.2"});
+.to(rule, {cssRule: {scaleY: 0}}, "-=2.2");
+````
+
+__How to give a reverse function to a button__
+````javascript
+document.querySelector("#cta").addEventListener("click", () => {
+  tl.reversed() ? tl.play() : tl.reverse();
+})
 ````

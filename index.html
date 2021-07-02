@@ -25,15 +25,13 @@
     </div>
   </aside>
 
-  <!-- Custom Javascript -->
-  <script type="type/Javascript" src="./assets/script.js"></script>
-
+  
   <!-- GSAP Script -->
   <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
   <!-- GSAP CSS Rule -->
   <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/CSSRulePlugin3.min.js"></script>
+  
   <script>
-
     const rule = CSSRulePlugin.getRule("span::after");
     // gsap.from(".anim1", {opacity: 0, duration: 1, ease: Power1.easeInOut, y: -50, stagger: 0.6});
     // gsap.from(".swirl", {opacity: 0, duration: 1, delay: 1.4, ease: Power1.easeInOut, y: 100});
@@ -43,7 +41,14 @@
     const tl = gsap.timeline({defaults: {duration: 1}});
 
     tl.from(".anim1", {y: -50, stagger: .6, opacity: 0})
-    .to(rule, {duration: 1.8, cssRule: {scaleY: 0}}, "-= 2.2");
+      .to(rule, {duration: 1.8, cssRule: {scaleY: 0}}, "-= 2.2")
+      .from(".windowImage", {x: 250, opacity: 0}, "-=1.5")
+      .from(".swirl", {opacity: 0, y: 100}, "-=.5");
+
+    document.querySelector("#cta").addEventListener("click", () => {
+      tl.reversed() ? tl.play() : tl.reverse();
+    })
+    
   </script>
 </body>
 </html>
