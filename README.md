@@ -2,7 +2,7 @@
 GSAP Tutorial Project from Design Youtube Channel "GSAP Animation Tutorial" Video.
 
 #### How to apply GSAP on our project
-Copy the gsap js and CSS Rule Plugin js from the GSAP 3 Page and paste them on our html page. Write scripts about the animation within a script tag.
+Copy the gsap js and CSS Rule Plugin js from the GSAP 3 Page and paste them on our html page. Write scripts about the animation on a script page.
 
 __How to apply normal animations__
 ````javascript
@@ -33,3 +33,19 @@ document.querySelector("#cta").addEventListener("click", () => {
   tl.reversed() ? tl.play() : tl.reverse();
 })
 ````
+
+We can also add different CSS Property to the animation. We can also multiple elements and apply animations on them.
+
+__Rotation in 360(also logging the rotation)__
+````javascript
+//Set the two elements' transform origin to center
+gsap.set("#male, #female", {transformOrigin: "50% 50%"});
+gsap.to("#male, #female", {duration: 20, rotate: 360});
+
+//Logging the rotation degrees
+const myObject = {rotation: 0};
+gsap.to(myObject, {duration: 20, rotation: 360, onUpdate: () => {
+  console.log(myObject.rotation);
+}});
+````
+
