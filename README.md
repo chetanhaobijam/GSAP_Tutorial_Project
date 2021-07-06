@@ -48,4 +48,12 @@ gsap.to(myObject, {duration: 20, rotation: 360, onUpdate: () => {
   console.log(myObject.rotation);
 }});
 ````
+_Animating multiple elements and using stagger_
+We can use class as a selector to animate multiple elements at once and can also use stagger to add delay between the multiple elements.
+````javascript
+gsap.to("#female", {duration: 20, ease: "back", rotation: 360});
+gsap.from(".circle", {opacity: 0, duration: 3, delay: 1, y: 250, ease: "elastic", stagger: 0.2});
+`````
+
+
 

@@ -1,3 +1,11 @@
+:root {
+  --charcoal: #264653ff;
+  --green: #2a9d8fff;
+  --orange-yellow: #e9c46aff;
+  --sandy-brown: #f4a261ff;
+  --burnt-sienna: #e76f51ff;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -17,6 +25,29 @@ body, html {
 }
 
 img {
-  width: 400px;
-  height: 400px;
+  width: 30ch;
+  height: 30ch;
+}
+
+.circle {
+  width: 10ch;
+  height: 10ch;
+  background-color: #333;
+  border-radius: 50%;
+}
+
+.charcoal {
+  background-color: var(--charcoal);
+}
+
+.green {
+  background-color: var(--green);
+}
+
+.orangeYellow {
+  background-color: var(--orange-yellow);
+}
+
+.sandyBrown {
+  background-color: var(--sandy-brown);
 }
