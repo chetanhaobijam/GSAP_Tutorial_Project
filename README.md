@@ -49,13 +49,13 @@ gsap.to(myObject, {duration: 20, rotation: 360, onUpdate: () => {
 }});
 ````
 
-_Animating multiple elements and using stagger_
+__Animating multiple elements and using stagger__
 We can use class as a selector to animate multiple elements at once and can also use stagger to add delay between the multiple elements.
 ````javascript
 gsap.to("#female", {duration: 20, ease: "back", rotation: 360});
 gsap.from(".circle", {opacity: 0, duration: 3, delay: 1, y: 250, ease: "elastic", stagger: 0.2});
 ````
-_Giving Random Y Values_
+__Giving Random Y Values__
 We can give random y values for animation in two ways.
 *Using Math.random() method
 ````javascript
@@ -67,22 +67,22 @@ gsap.from(".circle", {opacity: 0, duration: 5, delay: 1, y: () => Math.random() 
 gsap.from(".circle", {opacity: 0, duration: 3, delay: 1, y: "random(-200, 200)", ease: "elastic", stagger: 0.2});
 ````
 
-_Control Methods_
-*Play Animation
+__Control Methods__
+* Play Animation
 ````javascript
 play.addEventListener("click", () => {
   anim.play();
 });
 ````
 
-*Pause Animation
+* Pause Animation
 ````javascript
 pause.addEventListener("click", () => {
   anim.pause();
 });
 ````
 
-*Seek the time progress of animation
+* Seek the time progress of animation
 ````javascript
 seek.addEventListener("click", () => {
   anim.seek(2);
@@ -90,7 +90,7 @@ seek.addEventListener("click", () => {
 });
 ````
 
-*Show the animation at the provided progress
+* Show the animation at the provided progress
 ````javascript
 progress.addEventListener("click", () => {
   anim.progress(0.3);
@@ -98,27 +98,27 @@ progress.addEventListener("click", () => {
 });
 ````
 
-*Reverse Animation
+* Reverse Animation
 ````javascript
 reverse.addEventListener("click", () => {
   anim.reverse();
 });
 ````
-*Speed up Animation by using timeScale() method
+* Speed up Animation by using timeScale() method
 ````javascript
 timeSpeed.addEventListener("click", () => {
   anim.timeScale(4);
 });
 ````
 
-*Slow down Animation by using timeScale() method
+* Slow down Animation by using timeScale() method
 ````javascript
 timeSlow.addEventListener("click", () => {
   anim.timeScale(0.4);
 });
 ````
 
-_Sequencing in GSAP_
+__Sequencing in GSAP__
 We can add use timeline for smooth gsap animation. We can add relative positioning to tell when we want the animation to take place. We can also declare those positions as label and use it instead. We can repeat the animation and give the yoyo(alternate-reverse-alternate) effect.
 ````javascript
 const anim = gsap.timeline({repeat: "1000", yoyo: true});
@@ -128,4 +128,5 @@ anim.from(".circle", {opacity: 0, duration: 10, y: "random(-200, 200)", ease: "e
 ````
 
 <hr>
-####The End
+<br>
+#### The End
