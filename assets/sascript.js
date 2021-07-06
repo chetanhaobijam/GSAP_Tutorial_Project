@@ -1,7 +1,7 @@
-const anim = gsap.timeline();
-
+const anim = gsap.timeline({repeat: "1000", yoyo: true});
+anim.addLabel("circlesIntro", "+=1");
 anim.to("#female", {duration: 10, ease: "back", rotation: 360});
-anim.from(".circle", {opacity: 0, duration: 10, y: "random(-200, 200)", ease: "elastic", stagger: 0.2}, "-=10");
+anim.from(".circle", {opacity: 0, duration: 10, y: "random(-200, 200)", ease: "elastic", stagger: 0.2}, "circlesIntro");
 
 // Variable Declarations
 const play = document.querySelector("#play");

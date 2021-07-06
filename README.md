@@ -118,5 +118,14 @@ timeSlow.addEventListener("click", () => {
 });
 ````
 
+_Sequencing in GSAP_
+We can add use timeline for smooth gsap animation. We can add relative positioning to tell when we want the animation to take place. We can also declare those positions as label and use it instead. We can repeat the animation and give the yoyo(alternate-reverse-alternate) effect.
+````javascript
+const anim = gsap.timeline({repeat: "1000", yoyo: true});
+anim.addLabel("circlesIntro", "+=1");
+anim.to("#female", {duration: 10, ease: "back", rotation: 360});
+anim.from(".circle", {opacity: 0, duration: 10, y: "random(-200, 200)", ease: "elastic", stagger: 0.2}, "circlesIntro");
+````
 
-
+<hr>
+####The End
