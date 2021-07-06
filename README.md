@@ -127,6 +127,5 @@ anim.to("#female", {duration: 10, ease: "back", rotation: 360});
 anim.from(".circle", {opacity: 0, duration: 10, y: "random(-200, 200)", ease: "elastic", stagger: 0.2}, "circlesIntro");
 ````
 
-<hr>
-<br>
+
 #### The End
