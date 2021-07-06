@@ -67,7 +67,56 @@ gsap.from(".circle", {opacity: 0, duration: 5, delay: 1, y: () => Math.random() 
 gsap.from(".circle", {opacity: 0, duration: 3, delay: 1, y: "random(-200, 200)", ease: "elastic", stagger: 0.2});
 ````
 
+_Control Methods_
+*Play Animation
+````javascript
+play.addEventListener("click", () => {
+  anim.play();
+});
+````
 
+*Pause Animation
+````javascript
+pause.addEventListener("click", () => {
+  anim.pause();
+});
+````
+
+*Seek the time progress of animation
+````javascript
+seek.addEventListener("click", () => {
+  anim.seek(2);
+  sequenceUpdateDragger();
+});
+````
+
+*Show the animation at the provided progress
+````javascript
+progress.addEventListener("click", () => {
+  anim.progress(0.3);
+  sequenceUpdateDragger;
+});
+````
+
+*Reverse Animation
+````javascript
+reverse.addEventListener("click", () => {
+  anim.reverse();
+});
+````
+*Speed up Animation by using timeScale() method
+````javascript
+timeSpeed.addEventListener("click", () => {
+  anim.timeScale(4);
+});
+````
+
+*Slow down Animation by using timeScale() method
+````javascript
+timeSlow.addEventListener("click", () => {
+  anim.timeScale(0.4);
+});
+````
 
 
 
